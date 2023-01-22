@@ -6,7 +6,7 @@ Command: npx gltfjsx@6.1.3 trash.glb --transform
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export function Trash(props) {
   const { nodes, materials } = useGLTF('/trash-transformed.glb')
   return (
     <group {...props} dispose={null}>

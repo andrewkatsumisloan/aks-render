@@ -4,7 +4,8 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 
 // import { Model } from './components/Room';
-import { Model } from './components/Trash';
+import { Model } from './components/Drawer';
+import { Trash } from './components/Trash';
 
 import './App.css';
 
@@ -17,6 +18,22 @@ export default function App() {
       </div>
       <div className='column-right'>
         <Canvas
+          camera={{ position: [30, 30, 30], fov: 20 }}
+          style={{
+            backgroundColor: '#f2e9ce',
+            width: '65vw',
+            height: '100vh',
+          }}
+        >
+          <ambientLight intensity={.85} />
+          <ambientLight intensity={.6} />
+          <directionalLight intensity={3} />
+          <Suspense fallback={null}>
+            <Model />
+          </Suspense>
+          <OrbitControls />
+        </Canvas>
+        {/* <Canvas
           camera={{ position: [-45, 25, -40], fov: 20 }}
           style={{
             backgroundColor: '#f2e9ce',
@@ -28,10 +45,9 @@ export default function App() {
           <ambientLight intensity={1.2} />
           <directionalLight intensity={1.4} />
           <Suspense fallback={null}>
-            <Model />
           </Suspense>
           <OrbitControls />
-        </Canvas>
+        </Canvas> */}
       </div>
     </div>
 
