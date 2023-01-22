@@ -3,27 +3,36 @@ import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 
-import { Model } from './components/Room';
+// import { Model } from './components/Room';
+import { Model } from './components/Trash';
+
+import './App.css';
 
 export default function App() {
   return (
-    <div>
-      <Canvas
-        camera={{ position: [5, 5, 5], fov: 75 }}
-        style={{
-          backgroundColor: '#f2e9ce',
-          width: '100vw',
-          height: '100vh',
-        }}
-      >
-        <ambientLight intensity={1.25} />
-        <ambientLight intensity={0.1} />
-        <directionalLight intensity={0.4} />
-        <Suspense fallback={null}>
-          <Model />
-        </Suspense>
-        <OrbitControls />
-      </Canvas>
+    <div className='main'>
+      <div className='column-left'>
+        <h1>Learning React-Three</h1>
+        <h3> ...and Blender</h3>
+      </div>
+      <div className='column-right'>
+        <Canvas
+          camera={{ position: [-45, 25, -40], fov: 20 }}
+          style={{
+            backgroundColor: '#f2e9ce',
+            width: '65vw',
+            height: '100vh',
+          }}
+        >
+          <ambientLight intensity={1.85} />
+          <ambientLight intensity={1.2} />
+          <directionalLight intensity={1.4} />
+          <Suspense fallback={null}>
+            <Model />
+          </Suspense>
+          <OrbitControls />
+        </Canvas>
+      </div>
     </div>
 
   );
