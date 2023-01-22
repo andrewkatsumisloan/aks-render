@@ -15,12 +15,38 @@ export function Model(props) {
   const { nodes, materials } = useGLTF('/drawer.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Cube.geometry} material={nodes.Cube.material} position={[-0.98, 2.19, -14.72]} rotation={[-Math.PI, 0, 0]} onPointerOver={(event) => hover(true)}
-      onPointerOut={(event) => hover(false)}> <meshStandardMaterial color={hovered ? 'yellow' : 'orange'} /> </mesh>
-      <mesh geometry={nodes.Cube001.geometry} material={nodes.Cube001.material} position={[4.53, 4.43, 0.24]} rotation={[-Math.PI, 0, -Math.PI]} onPointerOver={(event) => hover(true)}
-      onPointerOut={(event) => hover(false)}> <meshStandardMaterial color={hovered ? 'red' : 'orange'} /> </mesh>
-      <mesh geometry={nodes.Cube002.geometry} material={nodes.Cube002.material} position={[-4.57, 4.3, 1.42]} rotation={[-Math.PI, 0, -Math.PI]} onPointerOver={(event) => hover(true)}
-      onPointerOut={(event) => hover(false)}> <meshStandardMaterial color={hovered ? 'red' : 'orange'} /> </mesh>
+      <mesh geometry={nodes.Cube.geometry} 
+        material={nodes.Cube.material} 
+        position={[-0.98, 2.19, -14.72]} 
+        rotation={[-Math.PI, 0, 0]} 
+        onPointerOver={(event) => hover(true)}
+        onPointerOut={(event) => hover(false)}
+        // scale={hovered ? 1.5 : 1 }
+      > 
+          <meshStandardMaterial color={hovered ? 'orange' : '#ffb812'} /> 
+      </mesh>
+      <mesh 
+        geometry={nodes.Cube001.geometry} 
+        material={nodes.Cube001.material} 
+        position={[4.53, 4.43, 0.24]} 
+        rotation={[-Math.PI, 0, -Math.PI]} 
+        onPointerOver={(event) => hover(true)}
+        onPointerOut={(event) => hover(false)}
+        // scale={hovered ? 1.5 : 1 }
+      > 
+          <meshStandardMaterial color={hovered ? 'red' : 'orange'} /> 
+      </mesh>
+      <mesh 
+        geometry={nodes.Cube002.geometry} 
+        material={nodes.Cube002.material} 
+        position={[-4.57, 4.3, 1.42]} 
+        rotation={[-Math.PI, 0, -Math.PI]} 
+        onPointerOver={(event) => hover(true)}
+        onPointerOut={(event) => hover(false)}
+        // scale={hovered ? 1.5 : 1 }
+      > 
+          <meshStandardMaterial color={hovered ? 'red' : 'orange'} /> 
+      </mesh>
     </group>
   )
 }

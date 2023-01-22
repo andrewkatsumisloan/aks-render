@@ -18,7 +18,7 @@ export default function App() {
       </div>
       <div className='column-right'>
         <Canvas
-          camera={{ position: [30, 30, 30], fov: 20 }}
+          camera={{ position: [30, 30, 30], fov: 30 }}
           style={{
             backgroundColor: '#f2e9ce',
             width: '65vw',
