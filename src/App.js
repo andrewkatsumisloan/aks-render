@@ -15,6 +15,8 @@ export default function App() {
       <div className='column-left'>
         <h1>Learning React-Three</h1>
         <h3> ...and Blender</h3>
+        <p> You can rotate the scene by dragging and zoom in/out using the wheel of your mouse. </p>
+        <p> If you hover over the objects, they change color</p>
       </div>
       <div className='column-right'>
         <Canvas
