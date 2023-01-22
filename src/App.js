@@ -27,9 +27,11 @@ export default function App() {
         >
           <ambientLight intensity={.85} />
           <ambientLight intensity={.6} />
+          <spotLight intensity={.4} />
           <directionalLight intensity={3} />
           <Suspense fallback={null}>
-            <Model />
+            <Model position={[-3, 0, 0]} />
+            <Trash position={[6, 0, 10]} />
           </Suspense>
           <OrbitControls />
         </Canvas>
